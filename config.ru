@@ -5,4 +5,4 @@ Dotenv.load
 
 require 'bin/main.rb'
 
-SenseiBot::Bot.run
+GlobusBot::Bot.run

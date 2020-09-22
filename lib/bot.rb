@@ -1,13 +1,21 @@
-require 'restcountry'
-
-module SenseiBot
+module GlobusBot
+  # responds to help command
   class Bot < SlackRubyBot::Bot
-    scan(/([A-Z]{2,5})/) do |client, data, match|
-      p '////////////////////////////////////////////////////////////////////////////////////'
-      text = data['blocks'][0]['elements'][0]['elements'][1]['text'].strip
-      country = Restcountry::Country.find_by_name(text)
-      capital =  country.capital
-      client.say(channel: data.channel, text: "Capital of #{text.capitalize()} is #{capital}")
+    help do
+      title 'Globus-bot'
+      desc 'This bot is for finding capital. Write the name of the country and it will return its capital'
+
+      command 'Armenia' do
+        title 'Armenia'
+        desc 'Yerevan'
+        long_desc 'Yerevan is capital of Armenia'
+      end
+
+      command 'Bangladesh' do
+        title 'Bangladesh'
+        desc 'Dhaka'
+        long_desc 'Dhaka is capital of Bangladesh'
+      end
     end
   end
 end
