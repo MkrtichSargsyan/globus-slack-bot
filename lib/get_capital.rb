@@ -12,7 +12,6 @@ module GlobusBot
 
     cn.each do |name|
       command "#{name} population" do |client, data, _match|
-        text = data['blocks'][0]['elements'][0]['elements'][1]['text'].strip
         country = Restcountry::Country.find_by_name(name) || nil
         country = JSON.parse(country.to_json)
         message = "population of #{name.capitalize} is #{country['population']} people"
