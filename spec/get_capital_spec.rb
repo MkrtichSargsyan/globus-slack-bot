@@ -35,6 +35,5 @@ RSpec::Matchers.define :respond_with_slack_message do |expected|
     it 'should return Yerevan if search for Armenia' do
       expect(message: "#{SlackRubyBot.config.user} Armenia").to respond_with_slack_messag
     end
-  
   end
 end
