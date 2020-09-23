@@ -36,7 +36,7 @@ RSpec::Matchers.define :respond_with_slack_message do |expected|
     #   expect(message: "#{SlackRubyBot.config.user} Armenia").to respond_with_slack_message
     # end
     it 'says hi' do
-      expect(message: "#{SlackRubyBot.config.user} hi").to respond_with_slack_message('hi')
+      expect(message: "#{SlackRubyBot.config.user} armenia").to respond_with_slack_message('Yerevan')
     end
   end
 end
