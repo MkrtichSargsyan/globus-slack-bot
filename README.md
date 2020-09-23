@@ -26,16 +26,19 @@ To get this project set up on your local machine, follow these simple steps:
 3. Copy and paste the following code into the Terminal: git clone git@github.com:MkrtichSargsyan/slack-bot.git
 4. Run ```cd globus-slack-bot```.
 5. Run ```bundle install``` to get the necessary gems.
-6. Create a [workspace](https://slack.com/get-started#/create) and follow the instructions and get a 'OAuth Access Token'.
-7. Create .env file in your project folder, copy your TOKEN to that .env file and paste it as ```SLACK_API_TOKEN = your-token-here```
-8. Run ```rackup``` from your terminal window to start running the project.
-9. Open the Slack and go to workspace page. Invite your bot to your page.
+6. Create a new slack [workspace](https://slack.com/get-started#/create) and give it a name
+7. Open [bot integration](http://slack.com/services/new/bot) link, and choose your created workspace from the top right corner, give a username for your bot and click on ```Add bot integration``` button.
+8. Copy the given token, also you can change the bot username and give an avatar to your bot.
+9. Click on ```Save Integration``` button.
+10. Create .env file in your project folder, copy your TOKEN to that .env file and paste it as ```SLACK_API_TOKEN = your-token-here```
+11. Run ```rackup``` from your terminal window to start running the project.
+12. Open the Slack and go to workspace page. Invite your bot to your page.
 
 ## List of available commands:
 
-```@globus help``` Shows information about bot commands
-```@globus countries``` Shows a list of all available countries
-```@globus <country name>``` Shows the capital of any particular country
+```@globus help``` Shows information about bot commands <br>
+```@globus countries``` Shows a list of all available countries <br>
+```@globus <country name>``` Shows the capital of any particular country <br>
 ```@globus <country name> population``` Shows the population of any particular country
 
 ## Author
