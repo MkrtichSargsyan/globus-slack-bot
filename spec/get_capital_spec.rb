@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rspec/expectations'
 
 RSpec::Matchers.define :respond_with_slack_message do |expected|
