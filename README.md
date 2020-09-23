@@ -1,5 +1,7 @@
 # Ruby Slack Bot Project- Globus-bot
 
+This is a slack bot project created with ruby. I have created a slack ruby bot and called it 'globus-bot'. This bot is for showing capitals for every country. 
+
 ![scr](https://user-images.githubusercontent.com/31889642/93992741-f7aa1380-fd9e-11ea-94d2-03541d76efc2.png)
 
 ## Built With 
