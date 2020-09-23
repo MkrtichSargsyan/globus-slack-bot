@@ -21,8 +21,8 @@ module GlobusBot
       command name do |client, data, _match|
         text = data['blocks'][0]['elements'][0]['elements'][1]['text'].strip
         country = Restcountry::Country.find_by_name(text) || nil
-        notfind = "Sorry I can not find (#{text}) capital"
-        message = country ? "Capital of #{text.capitalize} is #{country.capital}" : notfind
+        not_find = "Sorry I can not find (#{text}) capital"
+        message = country ? "Capital of #{text.capitalize} is #{country.capital}" : not_find
         client.say(channel: data.channel, text: message)
       end
     end
