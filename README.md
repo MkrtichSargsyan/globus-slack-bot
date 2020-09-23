@@ -9,9 +9,6 @@
 * restcountry gem
 * slack-ruby-bot gem
 
-## Video Explanation
-
-Here is the [video explanation]() of this project.
 
 ## Prerequisities
 
