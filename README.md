@@ -1,6 +1,6 @@
 # Ruby Slack Bot Project- Globus-bot
 
-![screenshot](![scr](https://user-images.githubusercontent.com/31889642/93992741-f7aa1380-fd9e-11ea-94d2-03541d76efc2.png))
+![scr](https://user-images.githubusercontent.com/31889642/93992741-f7aa1380-fd9e-11ea-94d2-03541d76efc2.png)
 
 ## Built With 
 
