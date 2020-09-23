@@ -14,7 +14,8 @@ RSpec::Matchers.define :respond_with_slack_message do |expected|
       @messages.push options
     end
 
-    message_command.call(client, Hashie::Mash.new(text: message, channel: channel, user: user, attachments: attachments))
+    message_command.call(client,
+                         Hashie::Mash.new(text: message, channel: channel, user: user, attachments: attachments))
 
     matcher = have_received(:message).once
     matcher = matcher.with(hash_including(channel: channel, text: expected)) if channel && expected
