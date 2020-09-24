@@ -23,7 +23,7 @@ To get this project set up on your local machine, follow these simple steps:
 
 1. Open Terminal.
 2. Navigate to your desired location to download the contents of this repository.
-3. Copy and paste the following code into the Terminal: git clone git@github.com:MkrtichSargsyan/slack-bot.git
+3. Copy and paste the following code into the Terminal: git clone ```https://github.com/MkrtichSargsyan/globus-slack-bot```
 4. Run ```cd globus-slack-bot```.
 5. Run ```bundle install``` to get the necessary gems.
 6. Create a new slack [workspace](https://slack.com/get-started#/create) and give it a name

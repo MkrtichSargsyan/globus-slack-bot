@@ -1,4 +1,3 @@
-# require 'restcountry'
 require_relative './helper'
 require_relative './country'
 
