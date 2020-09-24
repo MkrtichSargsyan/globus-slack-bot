@@ -32,6 +32,12 @@ RSpec::Matchers.define :respond_with_slack_message do |expected|
   end
 
   describe SlackRubyBot::Commands do
+    it 'responds with any message' do
+      expect(message: "#{SlackRubyBot.config.user} hi").to respond_with_slack_message
+    end
+    it 'says hi' do
+      expect(message: "#{SlackRubyBot.config.user} hi").to respond_with_slack_message('hi')
+    end
     it 'should return Yerevan if search for Armenia' do
       expect(message: "#{SlackRubyBot.config.user} Armenia").to respond_with_slack_messag
     end
