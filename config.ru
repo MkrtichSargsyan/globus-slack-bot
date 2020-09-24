@@ -5,4 +5,4 @@ Dotenv.load
 
 require 'bin/main.rb'
 
-GlobusBot::Helper.run
+Bot.run
