@@ -32,7 +32,7 @@ To get this project set up on your local machine, follow these simple steps:
 9. Click on ```Save Integration``` button.
 10. Create .env file in your project folder, copy your TOKEN to that .env file and paste it as ```SLACK_API_TOKEN = your-token-here```
 11. Run ```rackup``` from your terminal window to start running the project.
-12. Open the Slack and go to workspace page. Invite your bot to your page.
+12. Open the Slack and go to workspace page. Invite your bot to your page.To see available commands ask for @your_bot help.
 
 ## List of available commands:
 

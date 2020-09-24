@@ -1,6 +1,37 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    async (1.26.2)
+      console (~> 1.0)
+      nio4r (~> 2.3)
+      timers (~> 4.1)
+    async-io (1.30.1)
+      async (~> 1.14)
+    async-websocket (0.8.0)
+      async-io
+      websocket-driver (~> 0.7.0)
+    celluloid (0.17.4)
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-io (0.17.3)
+      celluloid (>= 0.17.2)
+      nio4r (>= 1.1)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.6)
+      timers (>= 4.1.1)
+    console (1.9.0)
     dotenv (2.7.6)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
@@ -25,6 +56,7 @@ GEM
       gli
       hashie
       websocket-driver
+    timers (4.3.2)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -33,6 +65,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  async-websocket (~> 0.8.0)
+  celluloid-io
   dotenv
   puma
   restcountry
