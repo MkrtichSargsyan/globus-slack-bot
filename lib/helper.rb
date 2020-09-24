@@ -11,7 +11,7 @@ module Helper
 
   def single_country(name)
     # transfering fetched data to json object
-    value = Restcountry::Country.find_by_name(name.capitalize, fulltext = false)
+    value = Restcountry::Country.find_by_name(name.capitalize)
     JSON.parse(value.to_json)
   end
 end
