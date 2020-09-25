@@ -1,6 +1,6 @@
 # Ruby Slack Bot Project- Globus-bot
 
-This is a slack bot project created with ruby. I have created a slack ruby bot and called it 'globus-bot'. This bot is for showing capitals for every country. 
+This is a slack bot project created with ruby. I have created a slack ruby bot and called it 'globus-bot'. This bot is for showing capitals for every country. It can also check for a country's population
 
 ![scr](https://user-images.githubusercontent.com/31889642/93992741-f7aa1380-fd9e-11ea-94d2-03541d76efc2.png)
 
@@ -8,6 +8,9 @@ This is a slack bot project created with ruby. I have created a slack ruby bot a
 
 * Ruby
 * dotenv gem
+* rack-test
+* puma
+* celluloid-io
 * restcountry gem
 * slack-ruby-bot gem
 
@@ -33,13 +36,14 @@ To get this project set up on your local machine, follow these simple steps:
 10. Create .env file in your project folder, copy your TOKEN to that .env file and paste it as ```SLACK_API_TOKEN = your-token-here```
 11. Run ```rackup``` from your terminal window to start running the project.
 12. Open the Slack and go to workspace page. Invite your bot to your page.To see available commands ask for @your_bot help.
+13. Enjoy!
 
 ## List of available commands:
 
-```@globus help``` Shows information about bot commands <br>
-```@globus countries``` Shows a list of all available countries <br>
-```@globus <country name>``` Shows the capital of any particular country <br>
-```@globus <country name> population``` Shows the population of any particular country
+```@your_bot help``` Shows information about bot commands <br>
+```@your_bot countries``` Shows a list of all available countries <br>
+```@your_bot <country name>``` Shows the capital of any particular country <br>
+```@your_bot <country name> population``` Shows the population of any particular country
 
 ## Author
 
