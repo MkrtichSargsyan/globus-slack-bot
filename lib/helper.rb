@@ -11,7 +11,7 @@ module Helper
 
   def single_country(name)
     # transfering fetched data to json object
-    value = Restcountry::Country.find_by_name(name.capitalize)
+    value = create_countries_array.find { |el| el['name'] == name }
     JSON.parse(value.to_json)
   end
 end

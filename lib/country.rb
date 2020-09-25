@@ -1,5 +1,6 @@
 require_relative './helper'
 
+# Country class
 class Country
   extend Helper
   include Helper
