@@ -5,6 +5,10 @@ require_relative './country'
 class GetCapital < SlackRubyBot::Commands::Base
   all_countries_names = Country.all_countries_names
 
+  def get_country_by_name(name)
+    single_country(name)
+  end
+
   command 'countries' do |client, data, _match|
     client.say(channel: data.channel, text: all_countries_names.join(', '))
   end

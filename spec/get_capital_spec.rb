@@ -1,4 +1,13 @@
+# rubocop:disable Layout/LineLength
 require 'rspec/expectations'
+
+begin
+  require 'slack-ruby-bot/rspec'
+rescue LoadError
+  system 'bundle install'
+  system 'rspec'
+  exit
+end
 
 RSpec::Matchers.define :respond_with_slack_message do |expected|
   include SlackRubyBot::SpecHelpers
@@ -14,8 +23,7 @@ RSpec::Matchers.define :respond_with_slack_message do |expected|
       @messages.push options
     end
 
-    message_command.call(client,
-                         Hashie::Mash.new(text: message, channel: channel, user: user, attachments: attachments))
+    message_command.call(client, Hashie::Mash.new(text: message, channel: channel, user: user, attachments: attachments))
 
     matcher = have_received(:message).once
     matcher = matcher.with(hash_including(channel: channel, text: expected)) if channel && expected
@@ -33,10 +41,21 @@ RSpec::Matchers.define :respond_with_slack_message do |expected|
 end
 
 describe SlackRubyBot::Commands do
-  it 'says hi' do
-    expect(message: "#{SlackRubyBot.config.user} hi").to respond_with_slack_message('hi')
+  it 'retuns Yerevan' do
+    expect(message: "#{SlackRubyBot.config.user} countries").to respond_with_slack_message
   end
-  it 'should return Yerevan if search for Armenia' do
-    expect(message: "#{SlackRubyBot.config.user} Armenia").to respond_with_slack_messag
+
+  it "should reply 'I don't understand that command!'" do
+    expect(message: "#{SlackRubyBot.config.user} something").to respond_with_slack_message
+  end
+
+  it 'should show population of Albania' do
+    expect(message: "#{SlackRubyBot.config.user} Albania population").to respond_with_slack_message
+  end
+
+  it 'should show all available methods' do
+    expect(message: "#{SlackRubyBot.config.user} help").to respond_with_slack_message
   end
 end
+
+# rubocop:enable Layout/LineLength
